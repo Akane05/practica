@@ -1,0 +1,172 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    background-color: rgb(185, 226, 191);
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the header */
+  .header {
+    grid-area: header;
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+  }
+  
+  /* The grid container */
+  .grid-container {
+    display: grid;
+    grid-template-areas: 
+      'header header header header header header' 
+      'izq izq med med der der' 
+      'footer footer footer footer footer footer';
+    /* grid-column-gap: 10px; - if you want gap between the columns */
+  } 
+  
+  .izq,
+  .med,
+  .der {
+    padding: 10px;
+    height:max-content /* Should be removed. Only for demonstration */
+  }
+  
+  /* Style the left column */
+  .izq {
+    grid-area: izq;
+  }
+  
+  /* Style the middle column */
+  .med {
+    grid-area: med;
+  }
+  
+  /* Style the right column */
+  .der {
+    grid-area: der;
+  }
+
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .grid-container  {
+      grid-template-areas: 
+        'header header header header header header' 
+        'izq izq izq izq izq izq' 
+        'med med med med med med' 
+        'der der der der der der' 
+        'footer footer footer footer footer footer';
+    }
+  }
+
+/* Style the footer */
+
+.pie-pagina {
+  width: 2000px;
+  background-color: #0a141d;
+}
+.pie-pagina .grupo-1 {
+width: 100%;
+max-width: 1200px;
+margin: auto;
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-gap: 50px;
+padding: 45px 0px;
+}
+.pie-pagina .grupo-1  .box figure {
+  display: inline-block;
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  margin-right: 10 px;
+  background-color: #0d2033;
+  text-align: left;
+  transition:  all 300ms ease;
+
+
+}
+.pie-pagina .grupo-1 .contactos a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10 px;
+  background-color: #0d2033;
+  text-align:center;
+  transition:  all 300ms ease;
+  }
+.pie-pagina .grupo-1  .box h2 {
+color: #fff;
+margin-bottom: 25px;
+font-size: 20px;
+}
+.pie-pagina .grupo-1  .box p {
+color:#efefef;
+margin-bottom: 10px;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+font-size: 20px;
+}  
+.pie-pagina .grupo-1 .red-social a {
+display: inline-block;
+text-decoration: none;
+width: 45px;
+height: 45px;
+line-height: 45px;
+color: #fff;
+margin-right: 10 px;
+background-color: #0d2033;
+text-align:center;
+transition:  all 300ms ease;
+}
+.pie-pagina .grupo-2 {
+background-color: #0a1a2a;
+padding: 15px 10px;
+text-align: center;
+color: #ffff;
+}
+.pie-pagina .grupo-2 small{
+
+font-size: 15px;
+
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+color: aqua;
+}
+.pie-pagina .grupo-1 .contactos a:hover{
+  color: aqua;
+  }
+
+@media screen and ( max-width: 500px){ 
+  .pie-pagina .grupo-1 {
+    width: 50vw;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 20vw;
+    padding: 20vw 0px;
+    }   
+
+
+
+}   
+  
+
+
+
+
+
